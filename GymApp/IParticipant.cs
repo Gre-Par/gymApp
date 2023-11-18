@@ -10,8 +10,6 @@ namespace GymApp
         
         void AddPoint(int point);
         
-        void AddPoint(char point);
-        
         void AddPoint(string point);
 
         event PointAddedDelegate PointAdded;

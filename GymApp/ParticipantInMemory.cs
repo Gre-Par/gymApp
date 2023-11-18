@@ -1,15 +1,17 @@
 ﻿namespace GymApp
 {
-    internal class ParticipantInMemory : ParticipantBase
+    public class ParticipantInMemory : ParticipantBase
 
     {
         public override event PointAddedDelegate PointAdded;
 
-        private List<float> points = new List<float>();
+        private List<int> points = new List<int>();
+
         public ParticipantInMemory(string name, string surname)
             : base(name, surname)
         {
         }
+        
         public override void AddPoint(int point)
         {
             if (point >= 0 && point <= 20)
