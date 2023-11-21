@@ -27,7 +27,7 @@ namespace GymApp
             }
             else
             {
-                throw new Exception("Ups, nie udało się. Przejdź do kolejnego wyzwania. Powodzenia!");
+                throw new Exception("String is not int");
             }
         }
 

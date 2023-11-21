@@ -28,10 +28,9 @@ for (int i = 1; i <= 5; i++)
 {
     Console.WriteLine($"Podaj wynik ze stacji numer {i}:");
     var input = Console.ReadLine();
-    var resault = int.TryParse(input, out int result);
+    
     try
     {
-        if (result > 0 && result <= 20)
         {
             participant.AddPoint(input);
         }

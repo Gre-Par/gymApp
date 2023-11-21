@@ -13,10 +13,10 @@
         {
             fileNameSurname = $"{name}_{surname}_{fileName}";
         }
-           
+
         public override void AddPoint(int point)
         {
-            if (point >= 0 && point <= 20)
+            if (point > 0 && point <= 20)
             {
                 using (var writer = File.AppendText($"{fileNameSurname}"))
                 {
@@ -26,6 +26,10 @@
                 {
                     PointAdded(this, new EventArgs());
                 }
+            }
+            else if (point == 0)
+            {
+                Console.WriteLine("Nie udało się. Przejdź do kolejnego wyzwania. Powodzenia!");
             }
             else
             {
